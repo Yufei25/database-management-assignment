@@ -99,7 +99,7 @@ CREATE TABLE CLIENT (
   Contact_FName VARCHAR2(20),
   Contact_LName VARCHAR2(20),
   Phone         VARCHAR2(20),
-  Email         VARCHAR2(32),
+  Email         VARCHAR2(64),
   CONSTRAINT Client_PK PRIMARY KEY (ClientNo)
 );
 
@@ -109,8 +109,8 @@ CREATE TABLE RECHARGEMENT (
   StartDate     DATE,
   ReturnDate    DATE,
   MileageBefore NUMBER(7),
-  NileageAfter  NUMBER(7),
-  InsuranceType VARCHAR2(8),
+  MileageAfter  NUMBER(7),
+  InsuranceType VARCHAR2(32),
   ClientNo      CHAR(6),
   LicenseNo     CHAR(6),
   CONSTRAINT Rechargement_PK PRIMARY KEY (RentalNo)
