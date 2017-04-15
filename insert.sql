@@ -4,7 +4,7 @@ Insert into CLIENT values ('c3001', 'Albert Allen', 'Sunnyside', 'Buffalo', 'New
 Insert into CLIENT values ('c3002', 'Kenneth Washington', '3rd', 'El Paso', 'Texas', 40, 'www.duobam.com', 'Kenneth', 'Washington', '1-(915)923-2727', 'kwashington1@foxnews.com');
 Insert into CLIENT values ('c3003', 'Philip Dixon', 'Green Ridge', 'Schenectady', 'New York', 67680, 'www.alphazap.com', 'Philip', 'Dixon', '1-(518)899-0792', 'pdixon2@nba.com');
 Insert into CLIENT values ('c3004', 'Debra Russell', 'Elka', 'Johnson City', 'Tennessee', 76225, 'www.latlux.com', 'Debra', 'Russell', '1-(423)723-5349', 'drussell3@is.gd');
-Insert into CLIENT values ('c3005', 'Diane Hamilton', 'Raven', 'Chicago', 'Illinois', 389, 'www.keylex.com', 'Diane', 'Hamilton', '1-(312)632-3433', 'dhamilton4@about.me');
+Insert into CLIENT values ('c3005', 'Diane Hamilton', 'Raven', 'Pittsburgh', 'Pennsylvania', 389, 'www.keylex.com', 'Diane', 'Hamilton', '1-(312)632-3433', 'dhamilton4@about.me');
 Insert into CLIENT values ('c3006', 'Billy Thomas', 'Iowa', 'Phoenix', 'Arizona', 29, 'www.stringtough.com', 'Billy', 'Thomas', '1-(602)425-6180', 'bthomas5@timesonline.co.uk');
 Insert into CLIENT values ('c3007', 'Jose Robertson', 'Monument', 'Hagerstown', 'Maryland', 36949, 'www.keylex.com', 'Jose', 'Robertson', '1-(240)516-3760', 'jrobertson6@state.gov');
 Insert into CLIENT values ('c3008', 'Ryan Evans', 'Scoville', 'Durham', 'North Carolina', 3203, 'www.toughjoyfax.com', 'Ryan', 'Evans', '1-(919)277-7535', 'revans7@hugedomains.com');
