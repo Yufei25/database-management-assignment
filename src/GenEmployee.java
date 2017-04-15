@@ -5,7 +5,7 @@ import java.io.*;
  */
 public class GenEmployee {
     private static int[] empnos = {111, 211, 311, 411, 121, 221, 323, 425, 131, 132,
-            133, 231, 234, 333, 334, 431, 434, 432, 141, 142, 243, 342, 441};
+            133, 231, 234, 333, 334, 431, 432, 141, 142, 243, 342, 441};
 
     public void read() throws IOException {
         InputStream in = new FileInputStream(new File("Employee.csv"));

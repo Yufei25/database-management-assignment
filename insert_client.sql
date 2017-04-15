@@ -13,3 +13,25 @@ Insert into CLIENT values ('c3012', 'Russell Patterson', 'Mosinee', 'Norwalk', '
 Insert into CLIENT values ('c3013', 'Jose Carr', 'Gateway', 'Orlando', 'Florida', 694, 'www.latlux.com', 'Jose', 'Carr', '1-(407)857-3959', 'jcarrc@icq.com');
 Insert into CLIENT values ('c3014', 'Jesse Carter', 'Almo', 'Amarillo', 'Texas', 94645, 'www.cardguard.com', 'Jesse', 'Carter', '1-(806)211-1638', 'jcarterd@usda.gov');
 Insert into CLIENT values ('c3015', 'Joan Flores', 'Scofield', 'Seattle', 'Washington', 410, 'www.gembucket.com', 'Joan', 'Flores', '1-(206)266-8233', 'jflorese@usgs.gov');
+
+-- insert rechargement
+
+Insert into RECHARGEMENT values ('R1002', '12-Feb-2017', '14-Mar-2017', 2232, 2789, 'Third Party Fire & Theft', 'c3011', 'L1147');
+Insert into RECHARGEMENT values ('R1003', '04-Mar-2017', '07-Mar-2017', 6646, 7322, 'Comprehensive', 'c3005', 'L1498');
+Insert into RECHARGEMENT values ('R1004', '21-Jan-2017', '29-Mar-2017', 1414, 2090, 'Third Party Property Damage', 'c3013', 'L1459');
+Insert into RECHARGEMENT values ('R1005', '12-Mar-2017', '16-Mar-2017', 331, 1041, 'Comprehensive', 'c3005', 'L1318');
+Insert into RECHARGEMENT values ('R1006', '18-Feb-2017', '25-Mar-2017', 2420, 2605, 'Third Party Fire & Theft', 'c3014', 'L1256');
+Insert into RECHARGEMENT values ('R1007', '09-Mar-2017', '04-Apr-2017', 4648, 4761, 'Comprehensive', 'c3015', 'L1389');
+Insert into RECHARGEMENT values ('R1008', '15-Jan-2017', '08-Apr-2017', 7827, 8968, 'Third Party Fire & Theft', 'c3011', 'L1308');
+Insert into RECHARGEMENT values ('R1009', '11-Jan-2017', '07-Mar-2017', 9374, 10437, 'Comprehensive', 'c3002', 'L1208');
+Insert into RECHARGEMENT values ('R1010', '07-Mar-2017', '02-Apr-2017', 8740, 9533, 'Third Party Property Damage', 'c3003', 'L1272');
+Insert into RECHARGEMENT values ('R1011', '16-Feb-2017', '26-Mar-2017', 6158, 7324, 'Comprehensive', 'c3012', 'L1385');
+Insert into RECHARGEMENT values ('R1012', '26-Feb-2017', '08-Mar-2017', 428, 1247, 'Third Party Property Damage', 'c3004', 'L1266');
+Insert into RECHARGEMENT values ('R1013', '27-Mar-2017', '10-Mar-2017', 3880, 4506, 'Third Party Fire & Theft', 'c3003', 'L1344');
+Insert into RECHARGEMENT values ('R1014', '30-Mar-2017', '15-Mar-2017', 3552, 4175, 'Comprehensive', 'c3010', 'L1249');
+Insert into RECHARGEMENT values ('R1015', '24-Mar-2017', '14-Feb-2017', 1473, 1632, 'Third Party Property Damage', 'c3012', 'L1473');
+Insert into RECHARGEMENT values ('R1016', '07-Mar-2017', '10-Mar-2017', 8491, 9022, 'Third Party Property Damage', 'c3001', 'L1174');
+
+
+
+
