@@ -81,10 +81,10 @@ Insert into RECHARGEMENT values ('R4016', '07-Mar-2017', '10-Mar-2017', 8491, 90
 
 -- insert fault report
 
-Insert into FAULTREPORT values ('RP1001', '11-Jan-2017', '...', '141', 'L1156', 'R1002');
-Insert into FAULTREPORT values ('RP1002', '12-Apr-2017', '...', '142', 'L1147', 'R1003');
-Insert into FAULTREPORT values ('RP2003', '13-Jan-2017', '...', '243', 'L1298', 'R2006');
-Insert into FAULTREPORT values ('RP2004', '10-Feb-2017', '...', '243', 'L1259', 'R2008');
-Insert into FAULTREPORT values ('RP3005', '15-Jan-2017', '...', '342', 'L1318', 'R3010');
-Insert into FAULTREPORT values ('RP3006', '15-Mar-2017', '...', '342', 'L1318', 'R3011');
-Insert into FAULTREPORT values ('RP4007', '22-Jan-2017', '...', '441', 'L1485', 'R4013');
+Insert into FAULTREPORT values ('RP1001', '14-Mar-2017', '...', '141', 'L1156', 'R1002');
+Insert into FAULTREPORT values ('RP1002', '12-Mar-2017', '...', '142', 'L1147', 'R1003');
+Insert into FAULTREPORT values ('RP2003', '26-Mar-2017', '...', '243', 'L1298', 'R2006');
+Insert into FAULTREPORT values ('RP2004', '10-Apr-2017', '...', '243', 'L1259', 'R2008');
+Insert into FAULTREPORT values ('RP3005', '15-Apr-2017', '...', '342', 'L1318', 'R3010');
+Insert into FAULTREPORT values ('RP3006', '01-Apr-2017', '...', '342', 'L1318', 'R3011');
+Insert into FAULTREPORT values ('RP3007', '12-Mar-2017', '...', '342', 'L1389', 'R3012');

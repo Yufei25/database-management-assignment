@@ -34,3 +34,20 @@ FROM (
   GROUP BY EMPNO)
   JOIN EMPLOYEE USING (EMPNO)
 ORDER BY RANK;
+
+-- 3. For each outlet, find the average number of hours it takes for a fault report to be generated
+-- after the “damaged” car is returned to the rental agency. Include “0” for those outlets without
+-- any fault reports.
+
+SELECT
+  OUTNO,
+  TO_CHAR(NVL(AVG(GAP), 0.0), '9999.99') AVERAGE_GAP
+FROM (
+    (SELECT
+       FAULTREPORT.LICENSENO,
+       DATECHECKED - RECHARGEMENT.RETURNDATE GAP
+     FROM FAULTREPORT
+       JOIN RECHARGEMENT USING (RENTALNO)) A
+    JOIN VEHICLE ON A.LICENSENO = VEHICLE.LICENSENO
+    RIGHT OUTER JOIN OUTLET USING (OUTNO))
+GROUP BY OUTNO;
