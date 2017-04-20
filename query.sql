@@ -133,38 +133,31 @@ FROM
 -- measures are to be used to help making the right decisions regarding the operations of the
 -- outlets.
 
-SELECT
-  OUTNO,
-  MAKE,
-  COUNT(MAKE)
-FROM VEHICLE
-GROUP BY OUTNO, MAKE
-ORDER BY OUTNO, MAKE;
 
 
-SELECT
-  OUTNO,
-  MAKE,
-  NUM,
-  FAULTS,
-  TRUNC(FAULTS / NUM, 2) AVG_FAULTS_RATE,
-  FAULT_RECORDS
-FROM
-  (SELECT
-    OUTNO,
-     COUNT(RENTALNO) NUM
-   FROM VEHICLE JOIN RAGREEMENT USING (LICENSENO) JOIN OUTLET USING (OUTNO)
-   GROUP BY OUTNO)
-  JOIN (
-  SELECT
-    OUTNO,\
-    COUNT(REPORTNUM)      FAULTS,
-    LISTAGG(LICENSENO || ':' || DATECHECKED, ',')
-    WITHIN GROUP (
-      ORDER BY LICENSENO) FAULT_RECORDS
-  FROM VEHICLE
-    JOIN FAULTREPORT USING (LICENSENO) JOIN OUTLET USING (OUTNO)
-  GROUP BY OUTNO) USING (MAKE);
+-- SELECT
+--   OUTNO,
+--   MAKE,
+--   NUM,
+--   FAULTS,
+--   TRUNC(FAULTS / NUM, 2) AVG_FAULTS_RATE,
+--   FAULT_RECORDS
+-- FROM
+--   (SELECT
+--     OUTNO,
+--      COUNT(RENTALNO) NUM
+--    FROM VEHICLE JOIN RAGREEMENT USING (LICENSENO) JOIN OUTLET USING (OUTNO)
+--    GROUP BY OUTNO)
+--   JOIN (
+--   SELECT
+--     OUTNO
+--     COUNT(REPORTNUM)      FAULTS,
+--     LISTAGG(LICENSENO || ':' || DATECHECKED, ',')
+--     WITHIN GROUP (
+--       ORDER BY LICENSENO) FAULT_RECORDS
+--   FROM VEHICLE
+--     JOIN FAULTREPORT USING (LICENSENO) JOIN OUTLET USING (OUTNO)
+--   GROUP BY OUTNO) USING (MAKE);
 -- too many fault reports for make C, fault rate is high, not suggested
 
 -- 9. We need to review fault reports of cars rented in previous month. In addition to the details on
