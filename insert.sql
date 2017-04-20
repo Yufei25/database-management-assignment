@@ -63,13 +63,13 @@ Insert into VEHICLE values ('L1485', 'A', '10', 'WHITE', 2017, 2, 2, 238, '05-Au
 
 -- insert rechargement
 
-Insert into RECHARGEMENT values ('R1002', '12-Feb-2017', '14-Mar-2017', 2232, 2789, 'Third Party Fire & Theft', 'c3011', 'L1156');
+Insert into RECHARGEMENT values ('R1002', '12-Feb-2017', '14-Feb-2017', 2232, 2789, 'Third Party Fire & Theft', 'c3011', 'L1156');
 Insert into RECHARGEMENT values ('R1003', '04-Mar-2017', '07-Mar-2017', 6646, 7322, 'Comprehensive', 'c3005', 'L1147');
-Insert into RECHARGEMENT values ('R1004', '21-Jan-2017', '29-Mar-2017', 1414, 2090, 'Third Party Property Damage', 'c3013', 'L1156');
+Insert into RECHARGEMENT values ('R1004', '21-Mar-2017', '29-Mar-2017', 2790, 2960, 'Third Party Property Damage', 'c3013', 'L1156');
 Insert into RECHARGEMENT values ('R2005', '12-Mar-2017', '16-Mar-2017', 331, 1041, 'Comprehensive', 'c3005', 'L1259');
 Insert into RECHARGEMENT values ('R2006', '18-Feb-2017', '25-Mar-2017', 2420, 2605, 'Third Party Fire & Theft', 'c3014', 'L1298');
-Insert into RECHARGEMENT values ('R2007', '09-Mar-2017', '04-Apr-2017', 4648, 4761, 'Comprehensive', 'c3015', 'L1298');
-Insert into RECHARGEMENT values ('R2008', '15-Jan-2017', '08-Apr-2017', 7827, 8968, 'Third Party Fire & Theft', 'c3011', 'L1259');
+Insert into RECHARGEMENT values ('R2007', '29-Mar-2017', '04-Apr-2017', 2605, 4761, 'Comprehensive', 'c3015', 'L1298');
+Insert into RECHARGEMENT values ('R2008', '28-Mar-2017', '08-Apr-2017', 1041, 1968, 'Third Party Fire & Theft', 'c3011', 'L1259');
 Insert into RECHARGEMENT values ('R3009', '11-Jan-2017', '07-Mar-2017', 9374, 10437, 'Comprehensive', 'c3002', 'L1308');
 Insert into RECHARGEMENT values ('R3010', '07-Mar-2017', '02-Apr-2017', 8740, 9533, 'Third Party Property Damage', 'c3003', 'L1318');
 Insert into RECHARGEMENT values ('R3011', '16-Feb-2017', '26-Mar-2017', 6158, 7324, 'Comprehensive', 'c3012', 'L1318');
@@ -77,7 +77,9 @@ Insert into RECHARGEMENT values ('R3012', '26-Feb-2017', '08-Mar-2017', 428, 124
 Insert into RECHARGEMENT values ('R4013', '27-Mar-2017', '10-Mar-2017', 3880, 4506, 'Third Party Fire & Theft', 'c3003', 'L1485');
 Insert into RECHARGEMENT values ('R4014', '30-Mar-2017', '15-Mar-2017', 3552, 4175, 'Comprehensive', 'c3010', 'L1472');
 Insert into RECHARGEMENT values ('R4015', '24-Mar-2017', '14-Feb-2017', 1473, 1632, 'Third Party Property Damage', 'c3012', 'L1408');
-Insert into RECHARGEMENT values ('R4016', '07-Mar-2017', '10-Mar-2017', 8491, 9022, 'Third Party Property Damage', 'c3001', 'L1408');
+Insert into RECHARGEMENT values ('R4016', '07-Mar-2017', '10-Mar-2017', 1634, 2000, 'Third Party Property Damage', 'c3001', 'L1408');
+Insert into RECHARGEMENT values ('R4017', '28-Mar-2017', '01-Apr-2017', 4507, 4800, 'Third Party Fire & Theft', 'c3008', 'L1485');
+Insert into RECHARGEMENT values ('R4018', '03-Apr-2017', '07-Apr-2017', 2001, 2221, 'Third Party Fire & Theft', 'c3007', 'L1408');
 
 -- insert fault report
 
