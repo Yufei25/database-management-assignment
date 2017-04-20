@@ -50,7 +50,8 @@ FROM (
        JOIN RECHARGEMENT USING (RENTALNO)) A
     JOIN VEHICLE ON A.LICENSENO = VEHICLE.LICENSENO
     RIGHT OUTER JOIN OUTLET USING (OUTNO))
-GROUP BY OUTNO ORDER BY OUTNO;
+GROUP BY OUTNO
+ORDER BY OUTNO;
 
 -- 4. List clients who have rented vehicle(s) but who have never generated any fault report. List
 -- the ID and name as well as the contact information for those clients.
@@ -64,9 +65,65 @@ GROUP BY OUTNO ORDER BY OUTNO;
 -- (client's number and name) for the outlet with the most rentals. Also include the outlet street
 -- address.
 
+
+SELECT
+  CLIENTNO,
+  CLIENTNAME,
+  STARTDATE,
+  RETURNDATE,
+  OUTLET_STREET,
+  RENTAL_NUMS
+FROM (
+  SELECT
+    OUTNO,
+    DENSE_RANK()
+    OVER (
+      ORDER BY RENTAL_NUMS DESC ) AS RANK,
+    RENTAL_NUMS,
+    STREET                           OUTLET_STREET
+  FROM
+    (
+      SELECT
+        OUTNO,
+        COUNT(RENTALNO) RENTAL_NUMS
+      FROM OUTLET
+        JOIN VEHICLE USING (OUTNO)
+        JOIN RECHARGEMENT USING (LICENSENO)
+      GROUP BY OUTNO
+      ORDER BY RENTAL_NUMS DESC) JOIN OUTLET USING (OUTNO)) JOIN VEHICLE USING (OUTNO)
+  JOIN RECHARGEMENT USING (LICENSENO)
+  JOIN CLIENT USING (CLIENTNO)
+WHERE RANK < 2;
+
 -- 7. For each client from West Virginia, list client ID and name, the number of rentals, average
 -- duration of a rental, and the number of fault reports associated with the rentals. Include “0s”
 -- for clients without any rentals.
+
+SELECT
+  CLIENTNO,
+  CLIENTNAME,
+  DECODE(FAULT_REPORT_NUM, NULL, 0, FAULT_REPORT_NUM) FAULT_REPORT_NUM,
+  RENTAL_NUMS,
+  AVG_DURANTION
+FROM
+  (SELECT
+     CLIENTNO,
+     COUNT(REPORTNUM) FAULT_REPORT_NUM
+   FROM
+     CLIENT
+     JOIN RECHARGEMENT USING (CLIENTNO)
+     JOIN FAULTREPORT USING (RENTALNO)
+   GROUP BY CLIENTNO)
+  RIGHT OUTER JOIN
+  (SELECT
+     CLIENTNO,
+     COUNT(RENTALNO)                                       RENTAL_NUMS,
+     AVG(RECHARGEMENT.RETURNDATE - RECHARGEMENT.STARTDATE) AVG_DURANTION
+   FROM CLIENT
+     LEFT OUTER JOIN RECHARGEMENT USING (CLIENTNO)
+   WHERE LOWER(STATE) = 'west virginia'
+   GROUP BY CLIENTNO) USING (CLIENTNO)
+  JOIN CLIENT USING (CLIENTNO);
 
 -- 8. A manager from one of the outlets wants to analyze data of the rentals for each “vehicle
 -- make” in his outlet in order to develop strategies for future purchases of vehicles and to share
